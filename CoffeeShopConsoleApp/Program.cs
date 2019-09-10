@@ -21,11 +21,15 @@ namespace CoffeeShopConsoleApp
                 new Espresso("Akmel Espresso")
             };
 
-
+            Console.WriteLine("Print the elements out in the orderList:");
             foreach (var coffeeItem in orderList)
             {
-                Console.WriteLine($"The price of the coffee is : {coffeeItem.price()} and the strength is {coffeeItem.Strength()}");
+                //use the override of the ToString() in the Coffee class - look to understand
+                Console.WriteLine(coffeeItem.ToString());
             }
+            
+            Console.WriteLine("press a key to se the OrderListMilk");
+            Console.ReadLine();
 
             // an list that consists of objects that implements the IMilk interface
             var OrderListMilk = new List<IMilk>() {
@@ -39,17 +43,21 @@ namespace CoffeeShopConsoleApp
             {
                 Console.WriteLine($"The amount of milk used is : {coffeeItem.MlMilk()}");
             }
-
+            Console.WriteLine("Hit a key to see the typecast");
+            Console.ReadLine();
 
             foreach (var coffeeItem in orderList)
             {
                 if (coffeeItem is IMilk)
                 {// the item implements the IMilk interface so I cast to this
                     IMilk cItem = coffeeItem as IMilk;
-                    Console.WriteLine("see mme as an IMilk object");
+                    Console.WriteLine("see me as an IMilk object");
                     //The only method in IMilk is MlMilk so I print it out 
                     Console.WriteLine($"Ml Milk used {cItem.MlMilk()}");
                 }
+                else
+                    Console.WriteLine("I'm not IMilk");
+
                 if (coffeeItem is ICoffeeBlend)
                 {
                     ICoffeeBlend cBlend = coffeeItem as ICoffeeBlend;
@@ -57,15 +65,11 @@ namespace CoffeeShopConsoleApp
                     //The only method in ICoffeBlend is the method CoffeeBlend so I print it out 
                     Console.WriteLine($"CoffeBlend:  {cBlend.CoffeeBlend()}");
                 }
-
-                Console.WriteLine($"The price of the coffee is : {coffeeItem.price()} and the strength is {coffeeItem.Strength()}");
+                else
+                    Console.WriteLine("I'm not ICoffeeBlend");
+                Console.WriteLine(coffeeItem.ToString());
+                Console.WriteLine("-------------------------------");
             }
-
-
-
-
-
-
         }
     }
 }
