@@ -7,6 +7,12 @@ namespace CoffeeShopConsoleApp
     public class BlackCoffee : Coffee
     {
         public BlackCoffee()
+            :base()
+        {
+        }
+
+        public BlackCoffee(int discount) 
+            : base(discount)
         {
         }
 

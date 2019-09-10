@@ -7,6 +7,12 @@ namespace CoffeeShopConsoleApp
     public class Cortado : Coffee, IMilk
     {
         public Cortado()
+            :base()
+        {
+        }
+
+        public Cortado(int discount) 
+            : base(discount)
         {
         }
 
@@ -17,7 +23,7 @@ namespace CoffeeShopConsoleApp
 
         public override int price()
         {
-            return 25;
+            return 25 - base.Discount;
         }
 
         public override string Strength()
