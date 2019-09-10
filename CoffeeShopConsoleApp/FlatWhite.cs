@@ -25,5 +25,10 @@ namespace CoffeeShopConsoleApp
         {
             return 35 - Discount;
         }
+
+        public override string TypeOfCoffee()
+        {
+            return "FlatWhite";
+        }
     }
 }

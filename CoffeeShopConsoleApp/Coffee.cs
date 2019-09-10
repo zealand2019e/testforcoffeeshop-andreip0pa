@@ -42,5 +42,11 @@ namespace CoffeeShopConsoleApp
 
         public abstract string Strength();
 
+        /// <summary>
+        /// tells which type of coffee the object is
+        /// </summary>
+        /// <returns>a string with the name of the coffee type e.g. espresso , Latte </returns>
+        public abstract string TypeOfCoffee();
+
     }
 }

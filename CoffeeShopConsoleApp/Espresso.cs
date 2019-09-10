@@ -18,6 +18,11 @@ namespace CoffeeShopConsoleApp
             return coffeeBlend;
         }
 
+        public override string TypeOfCoffee()
+        {
+            return "Espresso";
+        }
+
         public override string Strength()
         {
             return "Strong";

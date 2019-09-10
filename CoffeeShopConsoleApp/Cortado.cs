@@ -21,6 +21,11 @@ namespace CoffeeShopConsoleApp
             return 40;
         }
 
+        public override string TypeOfCoffee()
+        {
+            return "Cortado";
+        }
+
         public override int price()
         {
             return 25 - base.Discount;
