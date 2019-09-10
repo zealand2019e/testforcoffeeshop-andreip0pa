@@ -26,6 +26,18 @@ namespace CoffeeShopConsoleApp
                 Console.WriteLine($"The price of the coffee is : {coffeeItem.price()} and the strength is {coffeeItem.Strength()}");
             }
 
+            // an list that consists of objects that implements the IMilk interface
+            var OrderListMilk = new List<IMilk>() {
+                new Cortado(3),
+                new Latte(5),
+                new Cortado(),
+                new Latte(),
+            };
+
+            foreach (var coffeeItem in OrderListMilk)
+            {
+                Console.WriteLine($"The amount of milk used is : {coffeeItem.MlMilk()}");
+            }
 
         }
     }
