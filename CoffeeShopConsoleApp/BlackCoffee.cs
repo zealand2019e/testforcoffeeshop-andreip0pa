@@ -9,5 +9,10 @@ namespace CoffeeShopConsoleApp
         public BlackCoffee()
         {
         }
+
+        public override string Strength()
+        {
+            return "Strong";
+        }
     }
 }
