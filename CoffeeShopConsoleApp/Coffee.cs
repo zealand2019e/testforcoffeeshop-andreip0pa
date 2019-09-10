@@ -48,5 +48,10 @@ namespace CoffeeShopConsoleApp
         /// <returns>a string with the name of the coffee type e.g. espresso , Latte </returns>
         public abstract string TypeOfCoffee();
 
+        public override string ToString()
+        {
+            return $"I'm a {this.TypeOfCoffee()}, and my price is {this.price()}, and the strength of me is {this.Strength()}";
+        }
+
     }
 }
