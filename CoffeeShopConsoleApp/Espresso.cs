@@ -13,6 +13,12 @@ namespace CoffeeShopConsoleApp
             this.coffeeBlend = coffeblend;
         }
 
+
+        public Espresso()
+        {
+
+
+        }
         public string CoffeeBlend()
         {
             return coffeeBlend;
